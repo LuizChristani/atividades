@@ -1,0 +1,25 @@
+# Atividade 1
+
+package atividade48;
+
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class atividade {
+	public static void main(String[] args) {
+		
+		SimpleDateFormat sdf = new SimpleDateFormat("MMMM");
+		Date data = new Date();
+		Calendar calendario = Calendar.getInstance();
+		calendario.setTime(data);	
+		
+		int hora = calendario.get(Calendar.HOUR_OF_DAY);
+		int minutos = calendario.get(Calendar.MINUTE);
+		int diasemana = calendario.get(Calendar.DAY_OF_WEEK);
+		String mes = sdf.format(data);
+		
+		System.out.printf("Hoje é dia %d de %s, são %d horas e %d minutos.\n", diasemana, mes, hora, minutos);
+	}
+}
+		
